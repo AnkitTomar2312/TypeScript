@@ -3,8 +3,8 @@
     "allowJs": true,
     "checkJs": true,
     "target": "ES6",
-    "outDir": "build",
-    "noEmit": true
+    "outDir": "dist",
+    "noEmit": false
   },
   "include": ["src/**/*"]
 }
