@@ -13,7 +13,7 @@ interface Address {
 enum ContactStatus {
   Active = "active",
   Inactive = "inactive",
-  New = "new",
+  New = "new    ",
 }
 
 let secondaryContact: Contact = {
