@@ -2,11 +2,18 @@ interface Contact extends Address {
   id: number;
   name: ContactName;
   bithDate?: Date;
+  status: ContactStatus;
 }
 
 interface Address {
   line1: string;
   pincode: number;
+}
+
+enum ContactStatus {
+  Active = "active",
+  Inactive = "inactive",
+  New = "new",
 }
 
 let secondaryContact: Contact = {
@@ -15,6 +22,7 @@ let secondaryContact: Contact = {
   id: 2,
   line1: "w2/1112 Damodarnagar",
   pincode: 208027,
+  status: ContactStatus.Active,
 };
 
 type ContactName = string;
