@@ -35,8 +35,8 @@ function addTodoItem(todo: string): Todo {
 
   return newTodo;
 }
-
-function getNextId(items) {
+//generic types
+function getNextId<T extends { id: number }>(items: T[]) {
   return items.reduce((max, x) => (x.id > max ? x.id : max), 0) + 1;
 }
 // function getNextId<T extends { id: number }>(items: T[]): number {
