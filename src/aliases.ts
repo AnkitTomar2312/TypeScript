@@ -25,9 +25,13 @@ let secondaryContact: Contact = {
 
 type ContactName = string;
 
-function clone(source: Contact): Contact {
+function clone<T>(source: T): T {
   return Object.apply({}, source);
 }
 
 const a: Contact = { id: 1, name: "Ankit", status: ContactStatus.Active };
 const c = clone(a);
+
+const dateRange = { startDate: Date.now(), endDate: Date.now() };
+
+const dateCopy = clone(dateRange);
