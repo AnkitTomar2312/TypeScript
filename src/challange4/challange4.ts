@@ -1,4 +1,9 @@
-function query<T>(items: T[], query: any) {
+function query<T>(
+  items: T[],
+  query: {
+    [TProp in keyof T]?: (val: T[TProp]) => boolean;
+  }
+) {
   return items.filter((item) => {
     // iterate through each of the item's properties
     for (const property of Object.keys(item)) {
